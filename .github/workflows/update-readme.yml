@@ -1,0 +1,79 @@
+name: Update README metrics
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - README.md
+  schedule:
+    - cron: "17 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme-metrics
+  cancel-in-progress: true
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Update repository metrics
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          JAVA_COUNT="$(find . -maxdepth 1 -type f -name '*.java' | wc -l | tr -d ' ')"
+          UPDATED_AT="$(date -u '+%Y-%m-%d %H:%M UTC')"
+
+          python3 - "$JAVA_COUNT" "$UPDATED_AT" <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+
+          java_count, updated_at = sys.argv[1], sys.argv[2]
+          readme = Path("README.md")
+          content = readme.read_text(encoding="utf-8")
+
+          replacement = (
+              "<!-- AUTO-UPDATE:START -->\n"
+              "| Metric | Value |\n"
+              "|:--|:--|\n"
+              f"| Java source files | **{java_count}** |\n"
+              f"| Last metrics refresh | {updated_at} |\n"
+              "| Default branch | `master` |\n"
+              "| Language | Java |\n"
+              "<!-- AUTO-UPDATE:END -->"
+          )
+
+          updated, count = re.subn(
+              r"<!-- AUTO-UPDATE:START -->.*?<!-- AUTO-UPDATE:END -->",
+              lambda _: replacement,
+              content,
+              count=1,
+              flags=re.DOTALL,
+          )
+          if count != 1:
+              raise SystemExit("README auto-update markers were not found exactly once.")
+
+          readme.write_text(updated, encoding="utf-8")
+          PY
+
+      - name: Commit README metrics
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "README metrics are already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "docs: refresh README repository metrics"
+          git push
