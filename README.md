@@ -35,8 +35,8 @@ It brings together solutions to coding problems (primarily from LeetCode) and sm
 <!-- AUTO-UPDATE:START -->
 | Metric | Value |
 |:--|:--|
-| Java source files | Updated automatically |
-| Repository activity | Updated automatically |
+| Java source files | **76** |
+| Last metrics refresh | 2026-11-09 17:18 UTC |
 | Default branch | `master` |
 | Language | Java |
 <!-- AUTO-UPDATE:END -->
