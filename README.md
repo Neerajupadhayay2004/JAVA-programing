@@ -1,117 +1,183 @@
-# Java LeetCode Solutions
+<!--
+  Java Programming & DSA Practice
+  Repository documentation is maintained here.
+-->
 
-A collection of **LeetCode problem solutions implemented in Java**, along with beginner Java programming and DSA practice programs.
+<div align="center">
 
-## What This Repository Contains
+# ☕ Java Programming & DSA
 
-The repository contains individual Java solutions for problems involving:
+### A growing collection of Java practice programs and LeetCode solutions
 
-- Arrays and strings
-- Hash maps and sets
-- Two-pointer techniques
-- Linked lists
-- Binary trees and binary search trees
-- Dynamic programming
-- Backtracking
-- Matrix and grid problems
-- Stack and queue patterns
-- Greedy and optimization techniques
-- Java programming fundamentals
-- Number-based DSA problems
-- Basic OOP and classes
+[![Language](https://img.shields.io/badge/Language-Java-orange?logo=openjdk&logoColor=white)](https://www.java.com/)
+[![Platform](https://img.shields.io/badge/Platform-LeetCode-FFA116?logo=leetcode&logoColor=black)](https://leetcode.com/)
+[![Repository](https://img.shields.io/badge/Focus-DSA%20%26%20Problem%20Solving-blue)](https://github.com/Neerajupadhayay2004/JAVA-programing)
+[![Last Commit](https://img.shields.io/github/last-commit/Neerajupadhayay2004/JAVA-programing?label=last%20updated)](https://github.com/Neerajupadhayay2004/JAVA-programing/commits/master)
 
-## Java Practice Programs
+**Learn by solving. Improve by practising. Grow one problem at a time.**
 
-Recent beginner/DSA practice programs include:
+[Explore Solutions](#-problem-categories) · [Getting Started](#-getting-started) · [Connect](#-connect)
 
-- `ReverseNumber.java` — reverse a number using `% 10` and `/ 10`
-- `ReverseAndSum.java` — reverse a number and calculate digit sum
-- `SumOfDigits.java` — calculate the sum of digits
-- `ArmstrongNumber.java` — check whether a number is an Armstrong number
-- `LargestNumber.java` — find the largest among three numbers
-- `FibonacciSeries.java` — generate a Fibonacci series
-- `RepeatedDigits.java` — detect a repeated digit in a number
-- `RepeatedDigits1To100.java` — find numbers from 1 to 100 containing repeated digits
-- `Student.java` — basic class, constructor, method, objects, and user input
+</div>
 
-## Example LeetCode Problems
+---
 
-Current solutions include problems such as:
+## 👋 About This Repository
 
-- `Add-Two-Numbers.java`
-- `3Sum-Closest.java`
-- `Balanced-Binary-Tree.java`
-- `Binary-Tree-Preorder-Traversal.java`
-- `Climbing-Stairs.java`
-- `Coin-Change.java`
-- `Container-With-Most-Water.java`
-- `Construct-Product-Matrix.java`
-- `Delete-Node-in-a-BST.java`
-- `Equal-Sum-Grid-Partition-I.java`
-- `Generate-Parentheses.java`
-- `Longest-Palindromic-Substring.java`
+Welcome! This repository is my hands-on learning space for **Java programming, Data Structures and Algorithms (DSA), and problem-solving**.
 
-The collection can continue to grow as new problems are solved.
+It brings together solutions to coding problems (primarily from LeetCode) and smaller Java programs used to practise core programming concepts. I use it to strengthen my fundamentals, understand common algorithmic patterns, and keep a record of my learning progress.
 
-## Requirements
+> The goal is not just to collect solutions—it's to understand the logic behind them.
 
-- Java Development Kit (JDK) 8 or newer
-- A terminal or Java-compatible IDE
+## 📊 Repository Snapshot
 
-## Running a Practice Program
+<!-- AUTO-UPDATE:START -->
+| Metric | Value |
+|:--|:--|
+| Java source files | Updated automatically |
+| Repository activity | Updated automatically |
+| Default branch | `master` |
+| Language | Java |
+<!-- AUTO-UPDATE:END -->
 
-Compile and run any standalone program with:
+<sub>Repository metrics are refreshed automatically by GitHub Actions every day and whenever changes are pushed to the default branch.</sub>
+
+## 🧩 Problem Categories
+
+Solutions in this repository cover a range of topics, including:
+
+| Topic | What you can practise |
+|:--|:--|
+| **Arrays & Matrices** | Traversal, rotations, prefix/suffix ideas, matrix operations |
+| **Strings** | Palindromes, pattern matching, parsing, conversions |
+| **Hashing** | Hash maps, sets, frequency counting, anagrams |
+| **Two Pointers & Sliding Window** | Efficient array and string traversal |
+| **Binary Search** | Search in sorted and rotated arrays, boundaries |
+| **Linked Lists** | Reversal, merging, node manipulation |
+| **Trees & BSTs** | Traversals, depth, validation, ancestors |
+| **Recursion & Backtracking** | Permutations, subsets, N-Queens, Sudoku |
+| **Dynamic Programming** | Climbing stairs, coin change, sequence problems |
+| **Greedy & Intervals** | Jump Game, interval merging and insertion |
+| **Math & Bit Manipulation** | Number operations, powers, XOR-based problems |
+| **Java Fundamentals & OOP** | Classes, objects, constructors, loops, conditionals |
+
+*Categories are descriptive learning areas, not a claim that every solution has been formally classified or benchmarked.*
+
+## 📚 A Few Solutions to Explore
+
+Here are some examples from the current collection:
+
+| Problem | File |
+|:--|:--|
+| Two Sum | [Two-Sum.java](Two-Sum.java) |
+| Add Two Numbers | [Add-Two-Numbers.java](Add-Two-Numbers.java) |
+| 3Sum Closest | [3Sum-Closest.java](3Sum-Closest.java) |
+| Search in Rotated Sorted Array | [33-Search-in-Rotated-Sorted-Array.java](33-Search-in-Rotated-Sorted-Array.java) |
+| Trapping Rain Water | [42-Trapping-Rain-Water.java](42-Trapping-Rain-Water.java) |
+| Generate Parentheses | [Generate-Parentheses.java](Generate-Parentheses.java) |
+| Coin Change | [Coin-Change.java](Coin-Change.java) |
+| Binary Tree Preorder Traversal | [Binary-Tree-Preorder-Traversal.java](Binary-Tree-Preorder-Traversal.java) |
+| N-Queens | [N-Queens.java](N-Queens.java) |
+| Sudoku Solver | [37-Sudoku-Solver.java](37-Sudoku-Solver.java) |
+
+Browse the **[complete list of Java files](https://github.com/Neerajupadhayay2004/JAVA-programing)** in the repository for more.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **JDK 8 or newer** (a recent LTS JDK is recommended).
+- A terminal, IntelliJ IDEA, Eclipse, or VS Code with Java support.
+
+Check your Java installation:
+
+```bash
+java -version
+javac -version
+```
+
+### Clone the repository
+
+```bash
+git clone https://github.com/Neerajupadhayay2004/JAVA-programing.git
+cd JAVA-programing
+```
+
+### Compile and run a standalone program
+
+For example, to run the number-reversal practice program:
 
 ```bash
 javac ReverseNumber.java
 java ReverseNumber
 ```
 
-For example, the same pattern works for `ArmstrongNumber.java`, `FibonacciSeries.java`, `Student.java`, and the other practice programs.
+You can use the same approach for other standalone practice files. Some LeetCode submissions use the platform's expected class or method signature and may require the LeetCode environment or a suitable local test harness rather than running directly as a standalone application.
 
-## Recommended Practice Workflow
+## 🧠 How I Practise
 
-1. Read the problem before opening the solution.
-2. Understand the logic before memorizing the code.
-3. Identify the role of `% 10` and `/ 10` in digit-based problems.
-4. Try to implement the solution independently.
-5. Test with multiple inputs and edge cases.
-6. Analyze time and space complexity where applicable.
+1. Understand the problem statement and constraints.
+2. Try to design an approach before looking at a solution.
+3. Implement the solution in Java.
+4. Test normal cases, edge cases, and boundary conditions.
+5. Review time and space complexity.
+6. Revisit problems to improve clarity and efficiency.
 
-## Learning Goals
+## 🛠️ Tech & Concepts
 
-This repository is intended to strengthen:
+- **Language:** Java
+- **Core areas:** Object-Oriented Programming, Data Structures, Algorithms
+- **Practice platform:** LeetCode
+- **Workflow:** Git and GitHub
 
-- Java programming fundamentals
-- Object-oriented programming basics
-- Problem-solving skills
-- Data structures and algorithms
-- Time and space complexity analysis
-- Coding interview preparation
-
-## Repository Structure
+## 📁 Repository Layout
 
 ```text
 JAVA-programing/
-├── *.java                         # Java practice and LeetCode solutions
-├── ReverseNumber.java             # Number reversal
-├── ReverseAndSum.java             # Reverse + digit sum
-├── SumOfDigits.java               # Digit sum
-├── ArmstrongNumber.java           # Armstrong number
-├── LargestNumber.java             # Largest of three
-├── FibonacciSeries.java           # Fibonacci series
-├── RepeatedDigits.java            # Repeated digit detection
-├── RepeatedDigits1To100.java      # Repeated digits from 1 to 100
-├── Student.java                   # Basic OOP practice
-└── README.md                      # Repository documentation
+├── *.java       # LeetCode solutions and Java practice programs
+├── .github/
+│   └── workflows/
+│       └── update-readme.yml
+└── README.md    # Project overview and learning documentation
 ```
 
-## Author
+The Java files are kept at the repository root for simple browsing and direct access.
+
+## 🔄 Automatic README Updates
+
+GitHub Actions updates the Java source-file count and latest repository update timestamp in the **Repository Snapshot** section. It runs on pushes to the default branch and on a daily schedule.
+
+The workflow edits only this README section; it does not modify Java solutions or run submitted code.
+
+## 🎯 Learning Roadmap
+
+- [x] Build a collection of Java practice programs and coding solutions
+- [x] Practise a broad range of DSA topics
+- [ ] Add concise explanations and complexity notes to more solutions
+- [ ] Organise solutions by topic as the collection grows
+- [ ] Add more edge-case tests and reusable practice templates
+
+## 🤝 Contributions
+
+This is primarily a personal learning repository. Suggestions, corrections, and constructive feedback are welcome through GitHub Issues or Pull Requests.
+
+## 👨‍💻 About the Author
+
+<div align="center">
 
 **Neeraj Upadhayay**
 
-GitHub: https://github.com/Neerajupadhayay2004
+B.Tech CSE Student · Java & DSA Learner
 
-## License
+[![GitHub](https://img.shields.io/badge/GitHub-Neerajupadhayay2004-181717?logo=github)](https://github.com/Neerajupadhayay2004)
 
-No explicit license is currently provided in the repository. Add a license file if you intend to distribute these solutions under specific open-source terms.
+</div>
+
+---
+
+<div align="center">
+
+**Thanks for visiting! Keep learning, keep building, and keep solving.** 🚀
+
+</div>
