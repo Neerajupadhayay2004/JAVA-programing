@@ -2,28 +2,23 @@
 class Solution {
     public double myPow(double x, int n) {
 
-        long power = n;
-
-        // Handle negative exponent
-        if (power < 0) {
-            x = 1 / x;
-            power = -power;
-        }
+        long power = Math.abs((long) n);
 
         double result = 1.0;
 
         while (power > 0) {
 
-            // If power is odd
             if (power % 2 == 1) {
                 result *= x;
             }
 
-            // Square the base
             x *= x;
-
-            // Divide power by 2
             power /= 2;
+        }
+
+        // Take reciprocal only after calculation
+        if (n < 0) {
+            result = 1.0 / result;
         }
 
         return result;
